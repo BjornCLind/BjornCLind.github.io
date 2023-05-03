@@ -90,6 +90,11 @@ let resumeData = {
       description: "Front-End Banking App",
       imgurl: "../images/lhb.PNG",
       link: "http://bjorn-lindqvistbankingapplication.s3-website-us-west-1.amazonaws.com/",
+    },{
+      name: "Full Stack Banking App",
+      description: "W/ Firebase OAuth hosted on Linux VM",
+      imgurl: "../images/fslhb.PNG",
+      link: "http://54.215.145.1/",
     },
   ],
   testimonials: [
