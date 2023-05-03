@@ -86,10 +86,10 @@ let resumeData = {
       link: "https://bjornclind.github.io/BusStops/",
     },
     {
-      name: "Site Connectivity Checker",
-      description: "Python App",
-      imgurl: "../images/testimonials-bg.jpg",
-      link: "https://bjornclind.github.io/Eyes/",
+      name: "Banking App",
+      description: "Full Stack App hosted on VM",
+      imgurl: "../images/lhb.PNG",
+      link: "54.215.145.1/",
     },
   ],
   testimonials: [
