@@ -87,9 +87,9 @@ let resumeData = {
     },
     {
       name: "Banking App",
-      description: "Full Stack App hosted on VM",
+      description: "Front-End Banking App",
       imgurl: "../images/lhb.PNG",
-      link: "54.215.145.1/",
+      link: "http://bjorn-lindqvistbankingapplication.s3-website-us-west-1.amazonaws.com/",
     },
   ],
   testimonials: [
