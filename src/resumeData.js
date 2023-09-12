@@ -4,7 +4,7 @@ let resumeData = {
   role: "Full Stack Developer & Software Engineer",
   linkedinId: "https://www.linkedin.com/in/bclindqvist/",
   roleDescription:
-    " With a passion for futurology and Star Trek, I truly believe that technology can make a big difference in people's lives. I'm committed to making that happen by using my skills to create useful and accessible solutions. Whether it's developing a website or building an app, my goal is to create something that makes someones day-to-day tasks easier and more efficient. So if you're looking for a tech-savvy problem solver, I'm your person!",
+    "I am a highly skilled Full Stack Developer and Software Engineer driven by a profound passion for technological advancements and inspired by the visionary concepts of futurology. Firmly believing in the transformative power of technology, I am dedicated to leveraging my expertise to develop practical and user-centric solutions. Whether tasked with crafting intuitive websites or constructing innovative applications, my objective is to deliver solutions that streamline and enhance day-to-day tasks. If you seek a tech-savvy troubleshooter committed to driving efficiency and solving complex challenges, I am the ideal candidate for your team.",
   socialLinks: [
     {
       name: "linkedin",
