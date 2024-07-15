@@ -10,7 +10,7 @@
 
 ## <a name="features">🔋 Features</a>
 
-👉 **3D Hero Section**: Includes a 3D desktop model easily customizable to suit specific needs.
+👉 **3D Hero Section**: Includes a 3D desktop model.
 
 👉 **Interactive Experience and Work Sections**: Utilizes animations powered by framer motion for engaging user experience.
 
