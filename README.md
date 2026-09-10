@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# bjornclind.github.io
 
-## Getting Started
+Personal portfolio of Bjorn Lindqvist — built with Next.js (App Router),
+TypeScript and Tailwind CSS, deployed as a static site to GitHub Pages.
 
-First, run the development server:
+**Live:** https://bjornclind.github.io
+
+## Local development
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev       # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Build
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build     # static export -> ./out
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Preview the exported site exactly as Pages will serve it:
 
-## Learn More
+```bash
+npx serve out
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Pushing to `main` triggers [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml),
+which builds the static export and publishes `out/` to GitHub Pages.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+For this to work, the repository's **Settings → Pages → Source** must be set to
+**GitHub Actions**.
 
-## Deploy on Vercel
+### Notes for future changes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- This is a GitHub *user* site, served from the domain root, so `basePath` and
+  `assetPrefix` in `next.config.mjs` must stay empty. Setting them to
+  `/bjornclind.github.io` makes every CSS/JS asset 404.
+- `public/.nojekyll` is required — Pages runs Jekyll by default, which skips
+  underscore-prefixed folders such as Next's `_next/`.
+- `output: "export"` means no server: no Route Handlers, no `next/image`
+  optimization (hence `images.unoptimized`), and browser-only libraries must be
+  loaded with `next/dynamic` and `ssr: false`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Project structure
+
+```
+app/         # App Router entry (layout, page, theme provider)
+components/  # Page sections (Hero, Grid, Experience, Education, ...)
+components/ui/  # Reusable animated UI primitives
+data/        # Site content: nav, bio grid, experience, education, socials
+public/      # Static assets
+```
+
+## Content
+
+Page copy lives in [`data/index.ts`](data/index.ts) — edit that file rather than
+the components to update experience, education or links.
