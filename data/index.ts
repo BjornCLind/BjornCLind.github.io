@@ -116,10 +116,26 @@ export const socialMedia = [
     img: "/git.svg",
     link: "https://github.com/BjornCLind",
   },
+];
+
+export const projects = [
+  {
+    id: 1,
+    title: "Policy Analyzer",
+    des: "Retrieval-augmented search over a large policy corpus, letting staff ask plain-language questions and get answers grounded in the source documents.",
+    tech: ["Qwen3", "ChromaDB", "RAG", "Python"],
+  },
+  {
+    id: 2,
+    title: "Microfilm Digitization of Handwritten Reports",
+    des: "Fine-tuned a vision-language model with LoRA to transcribe handwritten reports from digitized microfilm, turning scanned archives into searchable text.",
+    tech: ["Qwen3-VL", "LoRA", "Vision-Language", "Python"],
+  },
   {
     id: 3,
-    img: "/link.svg",
-    link: "https://www.linkedin.com/in/bclindqvist/",
+    title: "Firearms Qualification Records",
+    des: "Centralized database and management interface replacing scattered recordkeeping, with structured entry, lookup and reporting in one place.",
+    tech: ["Laravel", "SQL", "Web App"],
   },
 ];
 
