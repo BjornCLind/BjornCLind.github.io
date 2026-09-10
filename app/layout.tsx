@@ -8,8 +8,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 const siteUrl = "https://bjornclind.github.io";
 const description =
-  "Portfolio of Bjorn Lindqvist, a full stack engineer building end-to-end " +
-  "web applications with Next.js, React, Node.js and MongoDB.";
+  "Portfolio of Bjorn Lindqvist, a full stack engineer who designs, builds " +
+  "and maintains web systems end to end.";
 
 export const metadata: Metadata = {
   // Required so the Open Graph/Twitter image paths below resolve to absolute URLs.
@@ -19,9 +19,10 @@ export const metadata: Metadata = {
   keywords: [
     "Bjorn Lindqvist",
     "full stack engineer",
+    "web systems analyst",
     "Next.js",
     "React",
-    "Node.js",
+    "TypeScript",
     "portfolio",
   ],
   authors: [{ name: "Bjorn Lindqvist", url: siteUrl }],
